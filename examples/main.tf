@@ -1,3 +1,18 @@
+terraform {
+  required_providers {
+    jira = {
+      source  = "sk-telemed/jira"
+      version = "1.0.0"
+    }
+  }
+}
+
+provider "jira" {
+  url      = "https://test.atlassian.net/"
+  user     = "sk-telemed"
+  password = "sk-telemed"
+}
+
 // This example works for JIRA projects that support epics
 data "jira_field" "epic_name" {
   name = "Epic Name"
@@ -42,5 +57,9 @@ resource "jira_issue" "example" {
   }
 
   project_key = "PROJ"
+}
+
+data "jira_project" "test_project" {
+  key = "Epic"
 }
 
