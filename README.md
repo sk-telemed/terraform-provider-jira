@@ -269,6 +269,11 @@ data "jira_jql" "issues" {
   jql = "project = ${jira_project.project_a.key} ORDER BY key ASC"
 }
 
+data "jira_project" "test_project" {
+  key = "Epic"
+}
+
+
 ```
 
 Run `terraform init`
