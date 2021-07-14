@@ -48,7 +48,7 @@ terraform {
   required_providers {
     jira = {
       source = "sk-telemed/jira"
-      version = "0.1.14"
+      version = "0.1.0"
     }
   }
 }
@@ -56,7 +56,7 @@ terraform {
 
 Run `terraform init`
 
-## Terraform v0.12 
+## Terraform v0.13 
 
 * Download `terraform-provider-jira` binary from [Github](https://github.com/sk-telemed/terraform-provider-jira/releases)
 * Unzip the zip file
