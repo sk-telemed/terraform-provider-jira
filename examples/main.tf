@@ -2,7 +2,7 @@ terraform {
   required_providers {
     jira = {
       source  = "sk-telemed/jira"
-      version = "1.0.0"
+      version = "1.1.0"
     }
   }
 }
@@ -23,8 +23,8 @@ data "jira_field" "epic_link" {
 }
 
 resource "jira_issue" "example_epic" {
-  assignee = "anubhavmishra"
-  reporter = "anubhavmishra"
+  assignee = "sk-telemed"
+  reporter = "sk-telemed"
 
   issue_type = "Epic"
 
@@ -39,12 +39,12 @@ resource "jira_issue" "example_epic" {
     (data.jira_field.epic_name.id) = "Example epic name"
   }
 
-  project_key = "PROJ"
+  project_key = data.jira_project.test_project.key
 }
 
 resource "jira_issue" "example" {
-  assignee = "anubhavmishra"
-  reporter = "anubhavmishra"
+  assignee = "sk-telemed"
+  reporter = "sk-telemed"
 
   issue_type = "Task"
 
@@ -56,10 +56,10 @@ resource "jira_issue" "example" {
     (data.jira_field.epic_link.id) = jira_issue.example_epic.issue_key
   }
 
-  project_key = "PROJ"
+  project_key = data.jira_project.test_project.key
 }
 
 data "jira_project" "test_project" {
-  key = "Epic"
+  key = "EPIC"
 }
 
