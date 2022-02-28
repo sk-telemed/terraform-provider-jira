@@ -4,10 +4,7 @@ go 1.13
 
 require (
 	cloud.google.com/go v0.61.0 // indirect
-	github.com/andygrunwald/go-jira v1.13.0
-	github.com/fatih/structs v1.1.0 // indirect
-	github.com/google/go-cmp v0.5.6 // indirect
-	github.com/google/go-querystring v1.0.0 // indirect
+	github.com/andygrunwald/go-jira v1.15.1
 	github.com/hashicorp/go-getter v1.5.3 // indirect
 	github.com/hashicorp/go-hclog v0.15.0 // indirect
 	github.com/hashicorp/go-plugin v1.4.1 // indirect
@@ -23,7 +20,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sergi/go-diff v1.2.0 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
-	github.com/trivago/tgo v1.0.5
+	github.com/trivago/tgo v1.0.7
 	github.com/zclconf/go-cty v1.8.4 // indirect
 	golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b // indirect
 	golang.org/x/net v0.0.0-20210326060303-6b1517762897 // indirect
